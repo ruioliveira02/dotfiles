@@ -117,6 +117,10 @@ prompt_left() {
 
 }
 
+prompt_failure() {
+        echo '%(?..%F{red}❌)%f %~ %# '
+}
+
 prompt_purification_setup() {
     # Display git branch
 
@@ -139,7 +143,7 @@ prompt_purification_setup() {
 
     prompt_git_branch
     RPROMPT='$(prompt_git_info) $(git_prompt_status)'
-    PROMPT='$(prompt_left)'
+    PROMPT='$(prompt_failure)$(prompt_left)'
 }
 
 prompt_purification_setup
