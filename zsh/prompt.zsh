@@ -118,7 +118,7 @@ prompt_left() {
 }
 
 prompt_failure() {
-        echo '%(?..%F{red}❌)%f %~ %# '
+        echo '%(?..%F{red}❌)%f'
 }
 
 prompt_purification_setup() {
